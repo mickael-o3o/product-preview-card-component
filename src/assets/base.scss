@@ -1,20 +1,53 @@
 @use './base/colors' as *;
 @use './base/layout' as *;
 @use './base/typography' as *;
+@use './base/font' as *;
 
 :root {
+  --color-primary: #{$green-500};
+  --color-primary-accent: #{$green-700};
+
+  --color-neutral-white: #{$white};
+  --color-neutral-cream: #{$cream};
+  --color-neutral-black: #{$black};
+  --color-neutral-grey: #{$grey};
+
+  --font-family-1: '#{$family-1}';
+  --font-family-2: '#{$family-2}';
+
+  --fontweight-normal: $weight-normal;
+  --fontweight-bold: $weight-bold;
+
+  --iinline-size-mobile: $iinline-size-mobile;
+  --inline-size-desktop: $inline-size-desktop;
+
+  font-size: $font-size;
 }
 
+@font-face {
+  font-family: $family-1;
+  src: url(./fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: $family-2;
+  src: url(./fonts/fraunces/Fraunces_72pt-Bold.ttf);
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-weight: normal;
 }
 
 body {
   min-height: 100vh;
+  font: {
+    family: $family-1;
+    weight: $weight-normal;
+  }
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
