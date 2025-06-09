@@ -30,10 +30,24 @@
       </section>
     </article>
   </main>
+  <footer>
+    <section class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by
+      <a href="https://github.com/mickael-o3o/product-preview-card-component.git">Mickael-o3o</a>.
+    </section>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
 @use './assets/utils/functions.scss' as *;
+
+main {
+  min-block-size: 100vh;
+  display: grid;
+  place-items: center;
+}
 
 .c-card {
   border-radius: var(--spacing-1);
@@ -41,7 +55,6 @@
   background-color: var(--color-neutral-white);
   inline-size: calc(100% - var(--spacing-2) * 2);
   max-inline-size: calc-rem(600);
-  margin: 1rem auto;
 
   @media (min-width: 27rem) {
     display: grid;
@@ -138,6 +151,24 @@
     align-items: center;
     justify-content: center;
     gap: calc-rem(10);
+  }
+}
+
+footer {
+  border: calc-rem(1) solid transparent;
+}
+
+.attribution {
+  font-family: monospace;
+  border: calc-rem(1) solid var(--color-neutral-grey);
+  color: var(--color-neutral-black);
+  inline-size: fit-content;
+  margin: 1rem auto;
+  padding: 1rem 3rem;
+  font-weight: normal;
+
+  a {
+    color: var(--color-primary);
   }
 }
 </style>
