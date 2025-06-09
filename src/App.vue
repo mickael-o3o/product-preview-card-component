@@ -151,6 +151,11 @@ main {
     align-items: center;
     justify-content: center;
     gap: calc-rem(10);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-primary-accent);
+    }
   }
 }
 
