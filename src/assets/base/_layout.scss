@@ -1,2 +1,5 @@
-$iinline-size-mobile: 23.4375rem;
-$inline-size-desktop: 90rem;
+@use 'sass:math';
+@use './typography';
+
+$inline-size-mobile: math.div(375, typography.$font-size) * 1rem;
+$inline-size-desktop: math.div(1440, typography.$font-size) * 1rem;

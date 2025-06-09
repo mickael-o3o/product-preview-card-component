@@ -2,6 +2,7 @@
 @use './base/layout' as *;
 @use './base/typography' as *;
 @use './base/font' as *;
+@use './base/spacing' as *;
 
 :root {
   --color-primary: #{$green-500};
@@ -15,13 +16,22 @@
   --font-family-1: '#{$family-1}';
   --font-family-2: '#{$family-2}';
 
-  --fontweight-normal: $weight-normal;
-  --fontweight-bold: $weight-bold;
+  --font-weight-normal: #{$weight-normal};
+  --font-weight-bold: #{$weight-bold};
 
-  --iinline-size-mobile: $iinline-size-mobile;
-  --inline-size-desktop: $inline-size-desktop;
+  --inline-size-mobile: #{$inline-size-mobile};
+  --inline-size-desktop: #{$inline-size-desktop};
+  --font-size: #{$font-size};
 
-  font-size: $font-size;
+  --spacing-1: #{$space-mobile-1};
+  --spacing-2: #{$space-mobile-2};
+
+  font-size: calc(($font-size / 16) * 1rem);
+
+  @media (min-width: 27rem) {
+    --spacing-1: #{$space-desktop-1};
+    --spacing-2: #{$space-desktop-2};
+  }
 }
 
 @font-face {
@@ -39,7 +49,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 body {
@@ -48,6 +57,8 @@ body {
     family: $family-1;
     weight: $weight-normal;
   }
+  line-height: 1.64;
+  color: var(--color-neutral-grey);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

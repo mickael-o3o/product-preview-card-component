@@ -1,6 +1,11 @@
 @use './base' as *;
 
 #app {
+  min-block-size: 100vh;
+  inline-size: 100%;
+  max-inline-size: var(--inline-size-desktop);
+  background-color: var(--color-neutral-cream);
   margin: 0 auto;
-  font-weight: normal;
+  display: grid;
+  place-items: center;
 }
