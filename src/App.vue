@@ -3,9 +3,20 @@
     <article class="c-card">
       <header class="c-card__header">
         <picture>
-          <source media="(min-width: 27rem)" srcset="/images/image-product-desktop.jpg" />
-          <source srcset="/images/image-product-mobile.jpg" />
-          <img class="c-card__image" src="/images/image-product-mobile.jpg" alt="" />
+          <source
+            width="600"
+            height="900"
+            media="(min-width: 27rem)"
+            srcset="/images/image-product-desktop.jpg"
+          />
+          <source width="686" height="480" srcset="/images/image-product-mobile.jpg" />
+          <img
+            width="686"
+            height="480"
+            class="c-card__image"
+            src="/images/image-product-mobile.jpg"
+            alt="A bottle of Gabrielle Essence Eau De Parfum"
+          />
         </picture>
       </header>
 
@@ -24,7 +35,7 @@
           <span class="c-card__price c-card__price--old">$169.99</span>
         </p>
 
-        <button class="c-card__add-to-cart">
+        <button type="button" class="c-card__add-to-cart">
           <img src="/images/icon-cart.svg" alt="" />Add to Cart
         </button>
       </section>
@@ -171,6 +182,7 @@ footer {
   margin: 1rem auto;
   padding: 1rem 3rem;
   font-weight: normal;
+  text-align: center;
 
   a {
     color: var(--color-primary);
