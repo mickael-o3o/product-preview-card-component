@@ -1,39 +1,59 @@
-# vue-project
+# Frontend Mentor - Product preview card component solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Type Support for `.vue` Imports in TS
+## Overview
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### The challenge
 
-## Customize configuration
+Users should be able to:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- View the optimal layout depending on their device's screen size
+- See hover and focus states for interactive elements
 
-## Project Setup
+### Screenshot
 
-```sh
-pnpm install
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [https://github.com/mickael-o3o/product-preview-card-component.git](https://github.com/mickael-o3o/product-preview-card-component.git)
+- Live Site URL: [Add live site URL here](https://mickael-o3o.github.io/product-preview-card-component)
+
+## My process
+
+### Built with
+
+- [Vue](https://vuejs.org)
+- [Sass](https://sass-lang.com)
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+
+### What I learned
+
+Using html picture element to create reposive image.
+
+```html
+<picture>
+  <source media="(min-width: 27rem)" srcset="/images/image-product-desktop.jpg" />
+  <source srcset="/images/image-product-mobile.jpg" />
+  <img class="c-card__image" src="/images/image-product-mobile.jpg" alt="" />
+</picture>
 ```
 
-### Compile and Hot-Reload for Development
+## Author
 
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+- Frontend Mentor - [@mickael-o3o](https://www.frontendmentor.io/profile/mickael-o3o)
